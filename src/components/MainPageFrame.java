@@ -1,14 +1,17 @@
+package components;
+
+import pages.Mainpage;
+
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 
 
-public class MyFrame extends JFrame {
+public class MainPageFrame extends JFrame {
     JButton button;
     JLabel label;
     JPanel panel2;
     JPanel panel1 ;
-    public MyFrame(){
+    public MainPageFrame(){
         this.setTitle("Snake Game");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(500,500);
@@ -22,7 +25,7 @@ public class MyFrame extends JFrame {
         button = new JButton();
         button.setFocusPainted(false);
         button.setFocusable(false);
-        button.addActionListener(e -> System.out.println("Pressed"));
+
         button.setText("Start Game");
         button.setIcon(new ImageIcon(new ImageIcon("start.png").getImage().getScaledInstance(30, 30, Image.SCALE_DEFAULT)));
         panel2.add(button);
@@ -39,6 +42,13 @@ public class MyFrame extends JFrame {
         this.add(panel1);
         this.add(panel2);
         this.setVisible(true);
+    }
+
+    public JButton getButton(){
+        return button;
+    }
+    public void setButtonListenert(Mainpage e){
+        button.addActionListener(e);
     }
 
 }
