@@ -9,5 +9,6 @@ public class Game {
     JLabel label = new JLabel("Hello World");
     public Game(){
 
+
     }
 }
