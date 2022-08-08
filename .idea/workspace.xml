@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="295a92af-4f75-47d7-b285-de5bf52fc679" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/CountDown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/GameFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Mainpage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Snake.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Squares.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPageFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CountDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CountDown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Mainpage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Mainpage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2D0PeMC7aT4gtJRrQagVuyyooAn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">

@@ -16,7 +16,7 @@ public class Mainpage implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == myframe.getButton()){
             myframe.dispose();
-            Game game = new Game();
+            new Game();
         }
     }
 }

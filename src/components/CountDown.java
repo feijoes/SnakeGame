@@ -10,9 +10,11 @@ public class CountDown extends JPanel {
     int count = 5;
     public CountDown() {
         label = new JLabel("...");
+        label.setFocusable(false);
+        label.setFont(new Font(label.getFont().getName(), label.getFont().getStyle(), 40));
         setLayout(new GridBagLayout());
         add(label);
-        timer = new Timer(700, e -> {
+        timer = new Timer(500, e -> {
             count--;
             if (count >= 0) {
                 label.setText(Integer.toString(count));
@@ -20,14 +22,16 @@ public class CountDown extends JPanel {
                 this.removeAll();
                 this.revalidate();
                 this.repaint();
+                this.setVisible(false);
             }
         });
-        timer.setInitialDelay(0);
+        timer.setInitialDelay(100);
         timer.start();
+
     }
     @Override
     public Dimension getPreferredSize() {
-        return new Dimension(200, 200);
+        return new Dimension(1, 1);
     }
     }
 
