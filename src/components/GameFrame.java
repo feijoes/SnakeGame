@@ -24,8 +24,6 @@ public class GameFrame extends JFrame {
                 } else if ((Snake.direction == "Up"  || Snake.direction == "Down" )&& (KeyEvent.getKeyText(event.getKeyCode()) == "Left" || KeyEvent.getKeyText(event.getKeyCode()) == "Right")) {
                     Snake.direction = KeyEvent.getKeyText(event.getKeyCode());
                 }
-                System.out.println(Snake.direction);
-
             }
             @Override
             public void keyReleased(KeyEvent e) {}
