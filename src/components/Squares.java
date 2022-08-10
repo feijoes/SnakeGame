@@ -10,6 +10,8 @@ public class Squares extends JPanel {
 
     private boolean start = true;
     Timer timer;
+
+    Apple apple = new Apple();
     public JLabel addSquare(int i, int j) {
         JLabel square = new JLabel();
         square.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
@@ -28,6 +30,7 @@ public class Squares extends JPanel {
 
 
         new Snake();
+
         this.setBackground(Color.gray);
         this.setLayout(new GridLayout(22,22,0,0));
         for (int i=0; i<=20;i++){
@@ -36,12 +39,9 @@ public class Squares extends JPanel {
             }
         }
         start = false;
+
         this.setVisible(true);
-
-        timer = new Timer(500, e -> {
-
-            actualize();
-        });
+        timer = new Timer(500, e -> actualize());
         timer.setInitialDelay(2600);
         timer.start();
     }
@@ -54,17 +54,17 @@ public class Squares extends JPanel {
                 if (squarestime[i][j] > 0){
                     squarestime[i][j]-=1;
                     this.add(squares[i][j]);
-                } else{
+                } else if (apple.x == j && apple.y == i){
+                    this.add(apple.actualize());
+                }else {
                     this.add(addSquare(i,j));
                 }
             }
         }
+
+
         this.revalidate();
         this.repaint();
-    }
-
-    public void setSquare(JLabel label, int i, int j){
-        squares[i][j] = label;
     }
 
 }

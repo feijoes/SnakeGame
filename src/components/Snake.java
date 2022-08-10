@@ -2,6 +2,7 @@ package components;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
 
 
 public class Snake {
@@ -14,24 +15,33 @@ public class Snake {
     public static String direction = "Right";
 
     Snake(){
-        boolean inlimitedY = (y+1 < 21 && y -1 > 1 );
-        boolean inlimitedX = (x+1 <20 && x -1 > 1 );
+        boolean inlimitedY = (y+1 < 20 && y -1 > 0 );
+        boolean inlimitedX = (x+1 <21 && x -1 > 0 );
         Timer timer = new Timer(500, e -> {
+            if (Squares.squares[y][x] != null){
+                if (Squares.squares[y][x].getBackground() == Color.red){lenSnake+=1;}
+            }
+            System.out.println(lenSnake);
             if (direction.equals("Right") && inlimitedX) {
                 Squares.squarestime[y][x + 1] = lenSnake;
+                if (Squares.squares[y][x+1].getBackground() == Color.red){lenSnake+=1;}
             } else if (direction.equals("Left") && inlimitedX) {
-                Squares.squarestime[y][x - 1] = lenSnake + 1;
+                Squares.squarestime[y][x - 1] = lenSnake;
             }
             if (direction.equals("Up") && inlimitedY) {
-                Squares.squarestime[y - 1][x] = lenSnake + 1;
+                Squares.squarestime[y - 1][x] = lenSnake;
             } else if (direction.equals("Down") && inlimitedY) {
                 Squares.squarestime[y + 1][x] = lenSnake;
+                if (Squares.squares[y +1][x].getBackground() == Color.red){lenSnake+=1;}
             }
+
             for (int j = 0; j <= lenSnake; j++) {
                 for (int i = 0; i <= lenSnake; i++) {
                     if ((y + j > 21 || y - j < 0) || (x + i > 20 || x - i < 0)) {
                         continue;
                     }
+
+
                     JLabel newsquare = new JLabel();
                     newsquare.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
                     newsquare.setBackground(Color.GREEN);
@@ -39,11 +49,11 @@ public class Snake {
                     newsquare.setVisible(true);
                     boolean inlimitedY2 = (y + j < 21 && y - j > 0);
                     boolean inlimitedX2 = (x + i < 20 && x - i > 0);
-                    if (Squares.squarestime[y + j][x + i] > 0 && inlimitedY2 && inlimitedX2) {
-                        Squares.squares[y + j][x + i] = newsquare;
-                    } else if (Squares.squarestime[y - j][x - i] > 0 && inlimitedX2 && inlimitedY2) {
-                        Squares.squares[y - j][x - i] = newsquare;
+                    if (inlimitedY2 && inlimitedX2) {
+                        if(Squares.squarestime[y + j][x + i] > 0 ){Squares.squares[y + j][x + i] = newsquare;}
+                        else if (Squares.squarestime[y - j][x - i] > 0){ Squares.squares[y - j][x - i] = newsquare;}
                     }
+
                 }
 
             }
