@@ -1,5 +1,7 @@
 package components;
 
+import pages.Mainpage;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -7,7 +9,20 @@ import java.awt.event.KeyListener;
 
 public class GameFrame extends JFrame {
     Timer timer;
+    public static boolean end = false;
     public GameFrame(){
+        Timer timer =new Timer(500,e ->{
+            if (end){
+                this.dispose();
+                new Mainpage();
+            }
+
+
+        });
+        timer.setInitialDelay(2600);
+        timer.start();
+
+
         this.setTitle("Snake Game");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(500,500);
@@ -46,6 +61,5 @@ public class GameFrame extends JFrame {
         this.add(new a(Color.gray,70,70),BorderLayout.NORTH);
         this.add(new a(Color.gray,70,70),BorderLayout.SOUTH);
         this.setVisible(true);
-
     }
 }

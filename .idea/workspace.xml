@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="295a92af-4f75-47d7-b285-de5bf52fc679" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Apple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Snake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Squares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Squares.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
